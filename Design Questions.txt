@@ -1,0 +1,6 @@
+1. Is putting all functions in the same service recommended?
+No, this is not the recommended approach for larger systems. Here's why:
+Single Responsibility Principle violation - Service handles room management, user management, and booking logic.
+2. Alternative to setRoom() not impacting previous bookings:
+Current approach: Store snapshot data in bookings (room type, price at booking time).
+Alternative approach: Version rooms - create new room versions instead of updating.
